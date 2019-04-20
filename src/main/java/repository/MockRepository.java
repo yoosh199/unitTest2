@@ -7,5 +7,7 @@ import java.util.List;
 public interface MockRepository {
     List<Champion> findAll();
 
-    Champion findByname(String name);
+    Champion findByName(String name);
+
+    Champion updatePositionByName(String name, String position);
 }

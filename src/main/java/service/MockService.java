@@ -16,8 +16,15 @@ public class MockService {
         return mockRepository.findAll();
     }
 
-    public Champion findByname(String name) {
-        final Champion champion = mockRepository.findByname(name);
+    public Champion findByName(String name) {
+        Champion champion = mockRepository.findByName(name);
+        return champion;
+    }
+
+    public Champion updatePositionByName(String name, String position) {
+        Champion champion = findByName(name);
+        champion.setName(position);
+
         return champion;
     }
 }

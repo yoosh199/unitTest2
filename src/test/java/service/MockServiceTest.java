@@ -25,15 +25,13 @@ public class MockServiceTest {
     private MockService mockService;
 
     @Test
-    public void testFindName(){
+    public void testShouldFindTamkenchi(){
         //given
-        given(mockRepository.findByname("탐켄치")).willReturn(new Champion("탐켄치", "서폿"));
+        given(mockRepository.findByName("탐켄치")).willReturn(new Champion("탐켄치", "서폿"));
         //when
-        Champion champion = mockService.findByname("탐켄치");
+        Champion champion = mockService.findByName("탐켄치");
         //then
-        verify(mockRepository, atLeast(1)).findByname(anyString());
+        verify(mockRepository, atLeast(1)).findByName(anyString());
         assertThat(champion.getName(), is("탐켄치"));
-
     }
-
 }
