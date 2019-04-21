@@ -8,4 +8,5 @@ import lombok.Data;
 public class Champion {
     private String name;
     private String position;
+    private int hasSkinCount;
 }
