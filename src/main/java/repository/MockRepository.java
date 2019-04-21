@@ -10,4 +10,6 @@ public interface MockRepository {
     Champion findByName(String name);
 
     Champion updatePositionByName(String name, String position);
+
+    void addChampion(Champion champion);
 }

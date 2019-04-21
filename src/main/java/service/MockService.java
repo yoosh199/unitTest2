@@ -27,4 +27,10 @@ public class MockService {
 
         return champion;
     }
+
+    public void addChampion(Champion champion){
+        Champion addChampion = new Champion(champion.getName(), champion.getPosition(), champion.getHasSkinCount());
+        mockRepository.addChampion(addChampion);
+        return;
+    }
 }
